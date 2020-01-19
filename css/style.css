@@ -501,13 +501,17 @@ main.menu div.flex article.recomendacion {
 main.menu div.flex article h3 {
     color: white;
     font-weight: 700;
-    font-size: 100%;
+    font-size: 72%;
     margin: 15px 0;
 }
 
 main.menu div.flex article h3 span {
     margin-left: 2%;
     color: #fa573a;
+}
+
+main.menu section .flex .aside {
+    margin-top: 8%;
 }
 
 main.menu div.flex article.recomendacion h3 {
@@ -542,6 +546,7 @@ main.menu div.flex article a.enlace {
 
 .carta {
     margin: 0 17px;
+    width: 100%;
 }
 
 main.menu div.flex .carta article a.enlace i {
@@ -568,6 +573,29 @@ main.menu div .ancla {
 main.menu div .ancla i {
     color: white;
     font-size: 26px;
+}
+
+@media(min-width:800px) {
+
+    /* section menu */
+    main.menu div.flex article h3 {
+        font-size: 100%;
+    }
+
+    main.menu section .flex .carta {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-top: 5%;
+    }
+
+    main.menu section .flex .carta article {
+        width: 46%;
+        margin: 0% 1% 1% 0;
+
+
+    }
 }
 
 @media(min-width:62.750em) {
@@ -597,6 +625,52 @@ main.menu div .ancla i {
         width: 50%;
         padding: 1.25em 1em;
     }
+
+    /* main menu.html */
+    main.menu section .flex .carta {
+        width: 65%;
+        flex-direction: column;
+    }
+
+    main.menu section .flex .imgMenu {
+        width: 30%;
+    }
+
+    main.menu section .flex .carta .descripcion {
+        width: 65%;
+        margin-left: 25px;
+    }
+
+    main.menu section .flex .carta article {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
+    }
+
+    main.menu section .flex .aside {
+        width: 25%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        margin: 30px 45px 30px 0;
+
+    }
+
+    main.menu section .flex .aside .recomendacion {
+        width: 100%;
+
+    }
+
+    main.menu section .flex .aside nav {
+        width: 100%;
+    }
+
+    main.menu div.flecha {
+        display: none;
+    }
+
+
 
 }
 
@@ -640,43 +714,5 @@ main.menu div .ancla i {
     }
 
 
-    /* main menu.html */
-    main.menu section .flex .carta {
-        width: 65%;
-        flex-direction: column;
-    }
 
-    main.menu section .flex .imgMenu {
-        width: 30%;
-    }
-
-    main.menu section .flex .carta .descripcion {
-        width: 65%;
-        margin-left: 25px;
-    }
-
-    main.menu section .flex .carta article {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        align-content: space-around;
-    }
-
-    main.menu section .flex .aside {
-        width: 25%;
-        display: flex;
-        flex-wrap: wrap;
-        align-content: space-between;
-        margin: 30px 45px 30px 0;
-
-    }
-
-    main.menu section .flex .aside .recomendacion {
-        width: 100%;
-
-    }
-
-    main.menu section .flex .aside nav {
-        width: 100%;
-    }
 }
