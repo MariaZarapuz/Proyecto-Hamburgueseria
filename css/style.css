@@ -303,6 +303,7 @@ main.home section .imagen .marco {
     background-color: transparent;
     transform: rotate(10deg);
     transition: 1s;
+    margin-bottom: 64px;
 }
 
 main.home section .imagen .marco img {
@@ -325,7 +326,7 @@ main.home section .columna h4 {
 }
 
 main.home section .columna p {
-    margin-bottom: 1em;
+    margin-bottom: 3em;
     color: #aaa;
 }
 
@@ -334,7 +335,7 @@ p {
 }
 
 footer {
-    position: flex;
+    position: contents;
     bottom: 0;
     background-color: #21242e;
     padding: 1.825em;
@@ -364,8 +365,6 @@ main.blog section article {
     margin: 20px 3%;
 }
 
-
-
 main.blog section article .imagen {
     width: 60%;
     margin: 0 auto;
@@ -377,10 +376,9 @@ main.blog section article .imagen div {
     background-color: #fa573ac7;
     color: white;
     font-weight: 700;
-    font-size: 1.5em;
-    line-height: 36px;
-    padding: 10px 15px;
-    width: 100px;
+    font-size: 18px;
+    width: 60px;
+    padding: 6.750px;
     text-align: center;
 
 }
@@ -389,9 +387,6 @@ main.blog section article .columna {
     width: 100%;
     padding: 1.25em 0;
 }
-
-
-
 
 main.blog section article .columna h3 {
     font-size: 1.5em;
@@ -409,60 +404,26 @@ main.blog section .columna h4 {
 }
 
 main.blog section .columna p {
-    margin-bottom: 1em;
+    margin-bottom: 3em;
     color: #aaa;
     font-size: 1em;
     line-height: 1.5em;
 
 }
 
-@media(min-width:48.066em) {
-    header .nav_top a span {
-        display: inline;
-        font-size: 70%;
-    }
-
-    main.home section .flex article {
-        width: 50%;
-        padding: 1.825em 1em;
-        border-bottom: 0px;
-        border-left: 1px solid #aaa;
-        margin-bottom: 1em;
-    }
-
-    main.home section .flex article:last-child {
-        width: 100%;
-    }
-
-    main.home section .underline {
-        margin-bottom: 2em;
-    }
-
-    main.home section .underline {
-        margin-bottom: 2em;
-    }
-}
-
-
-
 /* Seccion Menu */
 
 
 main.menu {
     background-color: #21242e;
-
-
 }
 
 main.menu section {
     padding: 35px;
 }
 
-
 main.menu section h2 {
     color: white;
-
-
 }
 
 main.menu section div nav ul li {
@@ -498,6 +459,11 @@ main.menu div.flex article.recomendacion {
     padding: 0px;
 }
 
+main.menu .flex .descripcion {
+    width: 100%;
+    position: relative;
+}
+
 main.menu div.flex article h3 {
     color: white;
     font-weight: 700;
@@ -505,9 +471,29 @@ main.menu div.flex article h3 {
     margin: 15px 0;
 }
 
-main.menu div.flex article h3 span {
-    margin-left: 2%;
+main.menu div.flex article span {
     color: #fa573a;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: 700;
+    margin: 0;
+    font-size: 66%;
+
+}
+
+main.menu div.flex article h3 {
+    display: block;
+    font-size: 66%;
+}
+
+main.menu div.flex article p {
+    font-size: 54%;
+}
+
+main.menu div.flex article .enlace {
+    font-size: 50%;
 }
 
 main.menu section .flex .aside {
@@ -575,11 +561,41 @@ main.menu div .ancla i {
     font-size: 26px;
 }
 
-@media(min-width:800px) {
 
-    /* section menu */
+/* media tablet */
+@media(min-width:800px) {
+    header .nav_top a span {
+        display: inline;
+        font-size: 70%;
+    }
+
+
+    main.home section .flex article {
+        width: 50%;
+        padding: 1.825em 1em;
+        border-bottom: 0px;
+        border-left: 1px solid #aaa;
+        margin-bottom: 1em;
+    }
+
+    main.home section .flex article:last-child {
+        width: 100%;
+    }
+
+    main.home section .underline {
+        margin-bottom: 2em;
+    }
+
     main.menu div.flex article h3 {
-        font-size: 100%;
+        font-size: 75%;
+    }
+
+    main.menu div.flex article span {
+        margin-top: 2px;
+    }
+
+    main.menu div.flex article p {
+        font-size: 66%;
     }
 
     main.menu section .flex .carta {
@@ -596,7 +612,10 @@ main.menu div .ancla i {
 
 
     }
+
 }
+
+/* media desktop */
 
 @media(min-width:62.750em) {
     header .hamburguesa {
@@ -604,6 +623,7 @@ main.menu div .ancla i {
         display: none;
         float: none;
     }
+
 
     header nav .menu {
         padding-top: 0px;
@@ -635,6 +655,7 @@ main.menu div .ancla i {
     main.menu section .flex .imgMenu {
         width: 30%;
     }
+
 
     main.menu section .flex .carta .descripcion {
         width: 65%;
@@ -670,8 +691,9 @@ main.menu div .ancla i {
         display: none;
     }
 
-
-
+    main.menu div.flex article span {
+        margin-top: 15px;
+    }
 }
 
 @media(min-width:75.0625em) {
@@ -680,6 +702,9 @@ main.menu div .ancla i {
 
     }
 
+    footer {
+        position: absolute;
+    }
 
     main.home section .flex article:last-child {
         width: 33.33%;
@@ -690,8 +715,6 @@ main.menu div .ancla i {
         padding: 9% 3%;
         max-width: 1100px;
         margin: 0 auto;
-
-
     }
 
     /* main blog.html */
@@ -712,7 +735,5 @@ main.menu div .ancla i {
     main.blog section .flex article:last-child {
         margin-right: 0px;
     }
-
-
 
 }
