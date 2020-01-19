@@ -11,6 +11,10 @@ color azul: #21242e;
     box-sizing: border-box;
 }
 
+html {
+    min-height: 100%;
+    position: relative;
+}
 
 .container {
     max-width: 1100px;
@@ -23,8 +27,14 @@ color azul: #21242e;
 }
 
 body {
+
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
+    min-height: 100vh;
+}
+
+.bodyMenu {
+    background-color: #21242e;
 }
 
 /* Flotaciones */
@@ -79,6 +89,7 @@ header .nav_top .container div:last-child {
 /* Inicio nav */
 header nav {
     padding: 20px 3%;
+    background-color: white;
 }
 
 
@@ -271,7 +282,8 @@ main.blog section article .columna .enlace a {
 }
 
 main.home section article .enlace:hover i,
-main.blog section article .enlace:hover i {
+main.blog section article .enlace:hover i,
+main.menu section article .enlace:hover i {
     margin-left: 10px;
     transition: .5s;
 }
@@ -322,12 +334,15 @@ p {
 }
 
 footer {
+    position: flex;
+    bottom: 0;
     background-color: #21242e;
     padding: 1.825em;
 }
 
 footer p {
     color: white;
+    font-size: 13px;
 }
 
 footer a {
@@ -428,6 +443,133 @@ main.blog section .columna p {
     }
 }
 
+
+
+/* Seccion Menu */
+
+
+main.menu {
+    background-color: #21242e;
+
+
+}
+
+main.menu section {
+    padding: 35px;
+}
+
+
+main.menu section h2 {
+    color: white;
+
+
+}
+
+main.menu section div nav ul li {
+    margin: 0px 3%;
+    padding: 15px;
+
+}
+
+main.menu section div nav ul li:hover {
+    background-color: #fa573a;
+    border-radius: 6px;
+}
+
+main.menu section div nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main.menu div.flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+main.menu div.flex article {
+    width: 100%;
+    margin: 30px 0;
+}
+
+
+main.menu div.flex article.recomendacion {
+    margin: 0px;
+    padding: 0px;
+}
+
+main.menu div.flex article h3 {
+    color: white;
+    font-weight: 700;
+    font-size: 100%;
+    margin: 15px 0;
+}
+
+main.menu div.flex article h3 span {
+    margin-left: 2%;
+    color: #fa573a;
+}
+
+main.menu div.flex article.recomendacion h3 {
+    margin-top: 25px;
+}
+
+main.menu div.flex article.recomendacion div {
+    border-bottom: 1px solid #fa573a;
+    width: 10%;
+    margin: 7px 0;
+}
+
+main.menu div.flex article.recomendacion p {
+    line-height: 19px;
+}
+
+
+main.menu div.flex article p {
+    color: white;
+    font-size: 70%;
+}
+
+main.menu div.flex article a.enlace {
+    display: block;
+    text-decoration: none;
+    color: #fa573a;
+    margin-top: 15px;
+    font-size: 0.6em;
+    font-weight: 700;
+
+}
+
+.carta {
+    margin: 0 17px;
+}
+
+main.menu div.flex .carta article a.enlace i {
+
+    color: #fa573a;
+
+}
+
+main.menu div.flecha {
+    position: relative;
+}
+
+main.menu div .ancla {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    background-color: #fa573a;
+    padding: 1px 6px;
+    border-radius: 4px;
+    width: max-content;
+    margin-left: 95%;
+}
+
+main.menu div .ancla i {
+    color: white;
+    font-size: 26px;
+}
+
 @media(min-width:62.750em) {
     header .hamburguesa {
         cursor: pointer;
@@ -498,6 +640,43 @@ main.blog section .columna p {
     }
 
 
+    /* main menu.html */
+    main.menu section .flex .carta {
+        width: 65%;
+        flex-direction: column;
+    }
 
+    main.menu section .flex .imgMenu {
+        width: 30%;
+    }
 
+    main.menu section .flex .carta .descripcion {
+        width: 65%;
+        margin-left: 25px;
+    }
+
+    main.menu section .flex .carta article {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
+    }
+
+    main.menu section .flex .aside {
+        width: 25%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        margin: 30px 45px 30px 0;
+
+    }
+
+    main.menu section .flex .aside .recomendacion {
+        width: 100%;
+
+    }
+
+    main.menu section .flex .aside nav {
+        width: 100%;
+    }
 }
